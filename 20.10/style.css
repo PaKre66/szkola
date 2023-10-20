@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#gallery > div.image {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    transform: scale(1);
+    transition: transform 1s;
+    z-index: 1;
+}
+#gallery>div.image:hover{
+    z-index: 999;
+}
+#gallery > div.image:hover > img {
+    transform: scale(1.2);
+    z-index: 999;
+    transition: all 0.1s ease-out;
+}
+#gallery > div.image > img {
+    width: 100%;
+}
+#gallery > div.image > span {
+    display: block;
+    min-height: 5vh;
+    line-height: 5vh;
+    text-align: center;
+}

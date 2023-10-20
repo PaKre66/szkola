@@ -1,0 +1,20 @@
+
+nav{
+    position: sticky;
+}
+main>aside>#left{
+    width: 15vw;
+    position: left;
+    display: flex;
+}
+
+main>article{
+    width: 75vw;
+    position: center;
+    display: flex;
+}
+main>aside>#right{
+    width: 10vw;
+    position: right;
+    display: flex;
+}
