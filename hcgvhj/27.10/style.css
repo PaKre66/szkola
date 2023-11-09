@@ -1,0 +1,88 @@
+@media screen and (max-width: 600px) {
+    body {
+      background-color: #f00;
+    }
+}
+@media screen and (min-width: 600px) {
+    body {
+      background-color: #ff0;
+    }
+  }
+@media screen and (min-width: 768px) {
+    body {
+      background-color: #f0f;
+    }
+}
+@media screen and (min-width: 992px) {
+    body {
+      background-color: #0f0;
+    }
+}
+@media screen and (min-width: 1200px) {
+    body {
+      background-color: #0ff;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body>header h1{
+    height: 10vh;
+    line-height: 10vh;
+}
+body>nav>ul{
+    list-style-type: none;
+    display: flex;
+}
+body>nav>ul>li{
+    height: 5vh;
+    width: 10vw;
+}
+body>nav>ul>li>a{
+    text-decoration: none;
+    display: block;
+    line-height: 5vh;
+    text-align: center;
+}
+body>footer{
+    height: 5vh;
+    line-height: 5vh;
+    text-align: center;
+}
+
+main{
+    display: flex;
+}
+main>aside{
+    width: 15vw;
+    padding: 10px;
+}
+main>aside>ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+main>aside>ul>li{
+    height: 5vh;
+    text-align: center;
+    line-height: 5vh;
+}
+main > aside > p {
+    text-align: justify;
+  }
+  main > article {
+    width: 85vw;
+    padding: 10px;
+    text-align: justify;
+  }
+  main > article header {
+    padding: 5px;
+  }
+  main > article p {
+    padding: 5px;
+    text-indent: 25px;
+  }
+

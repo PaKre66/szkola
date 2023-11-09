@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+body>header{
+    background-color: rgb(24, 255, 3);
+}
+body>header:hover{
+    background-color: red;
+}
+body>header>h1{
+    height: 10vh;
+    line-height: 10vh;
+    display: block;
+    text-align: center;
+}
+ul>nav>ul{
+    display: flex;
+    list-style-type: none;
+}
+body>nav>ul>li>a{
+    display: block;
+    height: 5vh;
+    line-height: 5vh;
+}
+body>article p{
+    padding: 10px;
+    margin: 5px;
+}
+body>article>section>header ~ code{
+    padding: 15px;
+}
+body>article>section>header ~ code+p{
+    background-color: yellow;
+}
+img{
+    float: left;
+    width: 10vw;
+}

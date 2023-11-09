@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body > header {
+  height: 10vh;
+  line-height: 10vh;
+}
+body > header > h1 {
+  text-align: center;
+}
+body > nav {
+  min-height: 5vh;
+  line-height: 5vh;
+}
+body > nav > ul {
+  display: flex;
+  list-style-type: none;
+}
+body > nav > ul > li {
+  width: 10vw;
+}
+body > nav > ul > li a {
+  text-decoration: none;
+  color: #005;
+  display: block;
+  text-align: center;
+}
+body > nav > ul > li a:hover {
+  background-color: #eee;
+}
+body > footer {
+  background-color: #ccc;
+  min-height: 5vh;
+  line-height: 5vh;
+  text-align: center;
+}
+
+main {
+  display: flex;
+}
+main > aside {
+  width: 10vw;
+}/*# sourceMappingURL=style.css.map */

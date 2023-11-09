@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+table,th,td{
+    border:3px solid #000;
+}
+table{
+    border-collapse: collapse;
+    width: 50%;
+    height: 400px;
+    margin: auto;
+}
+thead th.first{
+    width: 25%;
+}
+thead th.second{
+    width:50%;
+}
+thead th.third{
+    width: 25%;
+}
+thead>tr{
+    background-color: rgb(255, 67, 67) ;
+}
+tbody>tr:hover{
+    background-color: red;
+}
+tfoot>tr{
+    background-color: rgb(255, 67, 67);
+}
+th, td{
+    padding: 10px;
+}
+td.va-top{
+    vertical-align: top;
+}
+td.va-middle{
+    vertical-align: middle;
+}
+td.va-bottom{
+    vertical-align: bottom;
+}
+td.right{
+    text-align: right;
+}
+td.center{
+    text-align: center;
+}
