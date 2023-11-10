@@ -12,6 +12,7 @@ body > header > h1 {
   text-align: center;
 }
 body > nav {
+  background-color: #ccc;
   min-height: 5vh;
   line-height: 5vh;
 }
@@ -40,7 +41,13 @@ body > footer {
 
 main {
   display: flex;
+  text-align: justify;
 }
 main > aside {
   width: 10vw;
+  padding: 5px;
+}
+main > article {
+  width: 70vw;
+  padding: 5px;
 }/*# sourceMappingURL=style.css.map */
