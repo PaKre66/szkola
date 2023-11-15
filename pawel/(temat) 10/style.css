@@ -1,0 +1,168 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+article{
+    padding: 25px;
+}
+#borderRadius>img{
+    border-radius: 50% 10px; 
+}
+#boxShadow > img {
+    padding: 5px;
+    border: 1px solid #123;
+    transition: box-shadow 1s ease-in-out;
+}
+#boxShadow > img:hover {
+    transition: box-shadow 1s ease-in-out;
+    box-shadow: 0 0 15px black;
+}
+#imageCenter>img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#imageCenter > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+#imageOpacity{
+    position: relative;
+}
+#imageOpacity>img{
+    opacity: 0.4;
+}
+#imageOpacity>.imageText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 43px;
+}
+#imageBgr {
+    background-image: url("https://picsum.photos/id/583/640/480");
+    width: 640px;
+    height: 480px;
+    opacity: 0.3;
+} */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  article {
+    padding: 25px;
+  }
+  
+  #borderRadius > img {
+    border-radius: 50% 10px;
+  }
+  
+  #boxShadow > img {
+    padding: 5px;
+    border: 1px solid #123;
+    border-radius: 0 0 50px 50px;
+    transition: box-shadow 1s ease-in-out;
+  }
+  #boxShadow > img:hover {
+    transition: box-shadow 1s ease-in-out;
+    box-shadow: -10px 10px 10px red, 10px 10px 15px black, -10px -10px 10px blue;
+  }
+  
+  #imageCenter > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #imageOpacity {
+    position: relative;
+  }
+  #imageOpacity > img {
+    opacity: 0.4;
+  }
+  #imageOpacity > .imageText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 42px;
+  }
+  
+  #imageBgr {
+    background-image: url("https://picsum.photos/id/583/640/480");
+    width: 640px;
+    height: 480px;
+    opacity: 0.3;
+  }
+  
+  #imageFilters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  #imageFilters > .blur {
+    filter: blur(5px);
+    transition: filter 1s ease-in-out;
+  }
+  #imageFilters > .blur:hover {
+    filter: blur(0);
+    transition: filter 1s ease-in-out;
+  }
+  #imageFilters > .brightness {
+    filter: brightness(250%);
+  }
+  #imageFilters > .contrast {
+    filter: contrast(200%);
+  }
+  #imageFilters > .grayscale {
+    filter: grayscale(100%);
+    transition: filter 1s ease-in-out;
+  }
+  #imageFilters > .grayscale:hover {
+    filter: grayscale(0);
+    transition: filter 1s ease-in-out;
+  }
+  #imageFilters > .huerotate {
+    filter: hue-rotate(45deg);
+  }
+  #imageFilters > .invert {
+    filter: invert(80%);
+  }
+  #imageFilters > .opacity {
+    filter: opacity(30%);
+  }
+  #imageFilters > .saturate {
+    filter: saturate(9);
+  }
+  #imageFilters > .sepia {
+    filter: sepia(100%);
+  }
+  #imageFilters > .shadow {
+    filter: drop-shadow(8px 8px 10px #2c2);
+  }
+  
+  #imageMask {
+    -webkit-mask-image: url("./cat-trans.png");
+            mask-image: url("./cat-trans.png");
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+            mask-position: center;
+  }

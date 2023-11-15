@@ -1,0 +1,66 @@
+@font-face {
+    src: url("./3Dumb.ttf");
+    font-family: Dumb;
+}
+@counter-style latin-bracket{
+    system:alphabetic;
+    symbols:a b c d e f g h i j k l m n o p q r s t u v w x y z;
+    suffix:") ";
+}
+
+*{
+    background-color: rgb(219, 219, 219);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:rgb(56, 56, 56);
+}
+
+#main{
+    background-color: red;
+    text-align: center;
+    border-style: double;
+    border-radius: 10px;
+    border-color: white;
+}
+#main>h1{
+    font-family: Arial,"Helvetica Neue", Helvetica, sans-serif;
+}
+header{
+    background-color: greenyellow;
+    border-style: double;
+    border-radius: 10px;
+    border-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+nav ul{
+    list-style-type:latin-bracket;
+    margin-left: 25px;
+
+}
+
+main > aside ul.menu{
+    list-style-type: none;
+}
+
+article ol, article ul{
+    margin-left: 25px;
+}
+
+article ol>ol,article ul>ol{
+    list-style-type: latin-bracket;
+}
+article ol>ol>ol,article ul>ol{
+    list-style-type: georgian;
+}
+article{
+    font-family: Dumb;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer{
+    text-align: center;
+}

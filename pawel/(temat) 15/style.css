@@ -1,0 +1,96 @@
+.dark-theme {
+  --anchor-color:#def;
+  --header-bg-color: #213;
+  --header-text-color: #acf;
+}
+
+.light-theme {
+  --anchor-color:#234;
+  --header-bg-color: #ccc;
+  --header-text-color: #215;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body > header {
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+  display: flex;
+  background-color: var(--anchor-bg-color);
+}
+body > header > h1 {
+  width: 90vw;
+  color: var(--header-text-color);
+}
+body > nav > ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  min-height: 5vh;
+  line-height: 5vh;
+}
+body > nav > ul > li {
+  width: 10vw;
+}
+body > nav > ul a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--anchor-color);
+}
+
+main {
+  display: flex;
+}
+main > aside {
+  width: 15vw;
+}
+main > aside > ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  min-height: 5vh;
+  line-height: 5vh;
+}
+main > aside > ul > li {
+  width: 10vw;
+}
+main > aside > ul a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--anchor-color);
+}
+main > article {
+  padding: 10px;
+  width: 85vw;
+}
+main > article > header > h2 {
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+}
+main > article > section h3 {
+  height: 5vh;
+  line-height: 5vh;
+  text-align: center;
+}
+main > article > section p {
+  padding-bottom: 5px;
+  border-top: 5px;
+}
+
+footer {
+  height: 5vh;
+  line-height: 5vh;
+  text-align: center;
+}
+
+#templateToggle {
+  height: 10vw;
+}/*# sourceMappingURL=style.css.map */

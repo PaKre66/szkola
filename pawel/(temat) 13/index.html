@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Formularz wieloczęściowy</h1>
+    </header>
+    <main>
+        <form action="#" method="get">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nazwa użytkownika</th>
+                        <th>Imię</th>
+                        <th>Nazwisko</th>
+                    </tr>
+                </thead>
+                <tbody id="form-tbody">
+                    <tr>
+                        <td><input type="text" name="input-1"></td>
+                        <td><input type="text" name="input-2"></td>
+                        <td><input type="text" name="input-3"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            <input type="number" name="rowNum" id="rowNum" step="1" min="1">
+                            <input type="button" id="addRow" value="+">
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <input type="submit" value="Wyślij">
+        </form>
+    </main>
+    <template id="userrow">
+        <tr>
+            <td><input type="text" name="input-1"></td>
+            <td><input type="text" name="input-2"></td>
+            <td><input type="text" name="input-3"></td>
+        </tr>
+    </template>
+</body>
+</html>

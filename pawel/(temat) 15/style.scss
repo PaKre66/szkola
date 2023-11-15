@@ -1,0 +1,99 @@
+// $anchorDarkColor:   #def;
+// $anchorLightColor:  #234;
+@mixin navigationItems($flexDirection) {
+    > ul {
+        display: flex;
+        flex-direction: $flexDirection;
+        list-style-type: none;
+        min-height: 5vh;
+        line-height: 5vh;
+        > li {
+            width: 10vw;
+        }
+        a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: var(--anchor-color);
+        }
+    }
+}
+// @mixin borderStyle($style, $weight,$color,$radius){
+//     border-style: $style;
+//     border-width: $weight;
+//     border-color: $color;
+//     border-radius: $radius;
+// }
+.dark-theme{
+    //--anchor-color:$anchorDarkColor;
+    --anchor-color:#def;
+    --header-bg-color: #213;
+    --header-text-color: #acf;
+}
+.light-theme{
+    //--anchor-color:$anchorDarkColor;
+    --anchor-color:#234;
+    --header-bg-color: #ccc;
+    --header-text-color: #215;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    > header {
+        height: 10vh;
+        line-height: 10vh;
+        text-align: center;
+        display: flex;
+        background-color: var(--anchor-bg-color);
+        > h1 {
+            width: 90vw;
+            color: var(--header-text-color);
+        }
+    }
+    > nav {
+        @include navigationItems(row)
+    }
+}
+main {
+    display: flex;
+    > aside {
+        width: 15vw;
+        @include navigationItems(column)
+    }
+    > article {
+        padding: 10px;
+        width: 85vw;
+        > header {
+            > h2 {
+                height: 10vh;
+                line-height: 10vh;
+                text-align: center;
+            }
+        }
+        > section {
+            h3 {
+                height: 5vh;
+                line-height: 5vh;
+                text-align: center;
+            }
+            p {
+                padding-bottom: 5px;
+                border-top: 5px;
+            }
+        }
+    }
+}
+footer {
+    height: 5vh;
+    line-height: 5vh;
+    text-align: center;
+}
+// input{
+//     @include borderStyle(solid, 1px,#f00,5px );
+// }
+#templateToggle {
+    height: 10vw;
+}

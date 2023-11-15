@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+article {
+    padding: 25px;
+}
+#image{
+    background-color: black;
+}
+#image>img{
+    position: absolute;
+    transition: filter 1s ease-in-out;
+    
+}
+#image>img:hover{
+    display: none;
+    transition: filter 1s ease-in-out;
+}
+#imageMask {
+    -webkit-mask-image: url("./cat-trans.png");
+            mask-image: url("./cat-trans.png");
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+            mask-position: center;
+  }

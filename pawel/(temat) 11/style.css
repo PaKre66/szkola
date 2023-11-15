@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+article>form{
+    display: block;
+    margin: auto;
+    width: 50vw;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+article>form>.form-description{
+    padding: 10px;
+    text-align: center;
+}
+article>form>.form-field{
+    padding: 10px;
+}
+article>form>.form-field input{
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+article > form > .form-field input[type=text] {
+    width: 90%;
+}
+article > form > .form-field input[type=submit] {
+    width: 50%;
+}  
+#message {
+    padding: 20px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50vw;
+    min-height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+#words {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    padding: 20px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90vw;
+    min-height: 50px;
+    text-align: left;
+  }

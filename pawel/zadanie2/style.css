@@ -1,0 +1,22 @@
+@counter-style latin{
+    system:alphabetic;
+    symbols:a b c d e f g h i j k l m n o p q r s t u v w x y z;
+    suffix:") ";
+}
+@counter-style duzegryckie{
+    system:alphabetic;
+    symbols: Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω;
+}
+article ol>ol{
+    list-style-type: latin;
+
+}
+article ol>ol>ol{
+    list-style-type: upper-roman;
+}
+article ol>ol>ol>ol{
+    list-style-type: armenian;
+}
+article ol>ol>ol>ol>ol{
+    list-style-type: duzegryckie;
+}
