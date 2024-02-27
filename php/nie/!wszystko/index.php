@@ -9,6 +9,7 @@
 <b>LEKCJA 1</b>
 <br>
 Czy gabryś jesy pedałem?
+    Odpowiedź: Tak
 <br>
 a) TAK
 <br>
