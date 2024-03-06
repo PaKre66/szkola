@@ -65,7 +65,7 @@ class pracownik extends Osoba{
   }
   public function rocznaWyplata(){
     
-    return "pracownik $this->imie $this->nazwisko otrzymuje wynagrodzenie w wysokości: $this->wyplata *$this->rok";
+    return 'pracownik'.' '.$this->imie.' '.$this->nazwisko.' '.'otrzymuje wynagrodzenie w wysokości:'.' '.$this->wyplata *$this->rok;
   }
 }
 class menager extends pracownik{
