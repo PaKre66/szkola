@@ -9,7 +9,7 @@ $dsn = 'mysql:host='.$dbhost.';port='.$dbport.';dbname='.$dbname;// Data Source 
 //konstruktor-metoda tworzona w klasie w celu 
 try {
   $pdo = new PDO($dsn, $dbuser, $dbpass);//połączenie z bazą(PHP DATA OBJECTS)
-} catch (PDOException $e) {
+} catch (PDOException $e) {//pdoexception jest klasą pochodną od exception(obsługi wyjątków)
   echo $e->getMessage();
 }
 ?>
@@ -25,7 +25,7 @@ try {
         <select name="country" id="country">
             <option value=""> -- Wybierz z listy -- </option>
             <?php
-$stmt = $pdo->prepare('SELECT  DISTINCT `country` FROM `users`');//zapytanie
+$stmt = $pdo->prepare('SELECT  DISTINCT `country` FROM `users`');//tworzy zapytanie i PDOStatemaent(zawiera składowe pozwalające przetworzyć zapytanie)
 $stmt->execute();
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 foreach($stmt->fetchAll() as $k_array => $v_array) {
