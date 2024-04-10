@@ -1,4 +1,16 @@
 <?php
+$dbhost='localhost';
+$dbport=3306;
+$dbname='products';
+$dbuser='root';
+$dbpass='';
+
+$dsn='mysql:host='.$dbhost.';port='.$dbport.'dbname='.$dbname;
+try{
+  $pdo=new PDO($dsn, $dbuser, $dbpass);
+}catch(PDOException $e){
+  echo $e->getMessage();
+}
 
 ?>
 <!DOCTYPE html>
@@ -9,15 +21,36 @@
   <title>Document</title>
 </head>
 <body>
-  <form action="index.php" method="post">
-    <input type="text" name="input-1" id="input-1" value="<?=key_exists('input-1', $_POST) ? $_POST['input-1']: ''; ?>">   
-    <input type="text" name="input-2" id="input-2" value="<?=key_exists('input-2', $_POST) ? $_POST['input-2']: ''; ?>">
-    <input type="submit" value="Wyślij">
+  <form action="./form_insert.php" method="post">
+  <div>
+            <div>
+                <label for="prod_name">Nazwa</label>
+            </div>
+            <div>
+                <input type="text" name="prod_name" id="prod_name">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="price">Cena</label>
+            </div>
+            <div>
+                <input type="number" name="price" id="price" min="0" step="0.01">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="quantity">Ilość</label>
+            </div>
+            <div>
+                <input type="number" name="quantity" id="quantity" min="0" step="1">
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Zapisz">
+            <input type="reset" value="Wyczyść">
+        </div>
   </form>
-  <!-- <form action="index.php" method="get">
-    <input type="text" name="input-1" id="input-1" value="<?=key_exists('input-1', $_GET) ? $_GET['input-1']: ''; ?>">   
-    <input type="text" name="input-2" id="input-2" value="<?=key_exists('input-2', $_GET) ? $_GET['input-2']: ''; ?>">
-    <input type="submit" value="Wyślij">
-  </form> -->
 </body>
 </html>
+ 
