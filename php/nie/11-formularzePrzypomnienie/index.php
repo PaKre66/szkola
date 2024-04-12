@@ -1,28 +1,23 @@
 <?php
-$dbhost='localhost';
-$dbport=3306;
-$dbname='products';
-$dbuser='root';
-$dbpass='';
+require_once('./connect.php');
+switch($_GET) {
+    case 'update':
 
-$dsn='mysql:host='.$dbhost.';port='.$dbport.'dbname='.$dbname;
-try{
-  $pdo=new PDO($dsn, $dbuser, $dbpass);
-}catch(PDOException $e){
-  echo $e->getMessage();
+        break;
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+
 <body>
-  <form action="./form_insert.php" method="post">
-  <div>
+    <form action="./form_insert.php" method="post">
+        <div>
             <div>
                 <label for="prod_name">Nazwa</label>
             </div>
@@ -39,6 +34,7 @@ try{
             </div>
         </div>
         <div>
+            
             <div>
                 <label for="quantity">Ilość</label>
             </div>
@@ -50,7 +46,41 @@ try{
             <input type="submit" value="Zapisz">
             <input type="reset" value="Wyczyść">
         </div>
-  </form>
+    </form>
+    <div>
+        <table>
+            <tr>
+                <th>Lp</th>
+                <th>Nazwa</th>
+                <th>Cena</th>
+                <th>Ilość</th>
+                <th>Akcje</th>
+            </tr>
+<?php
+try {
+    $stmt = $pdo->prepare('SELECT * FROM `products`');
+    $stmt->execute();
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+$stmt->setFetchMode(PDO::FETCH_ASSOC);
+foreach ($stmt->fetchAll() as $k => $v) {
+?>
+            <tr>
+                <td><?= $k + 1 ?></td>
+                <td><?= $v['prod_name'] ?></td>
+                <td><?= $v['price'] ?></td>
+                <td><?= $v['quantity'] ?></td>
+                <td>
+                    <a href="index.php?action=update&id=<?= $v['id'] ?>">Zmień</a>
+                    <a href="form_delete.php?id=<?= $v['id'] ?>">Usuń</a>
+                </td>
+            </tr>
+<?php
+}
+?>
+        </table>
+    </div>
 </body>
+
 </html>
- 
