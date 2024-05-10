@@ -60,3 +60,49 @@ window.addEventListener('DOMContentLoaded', () => {
       event.dataTransfer.setData('text', event.target.id);
   });
 });
+// window.addEventListener('DOMContentLoaded', () => {
+//     if(typeof(Storage) !== 'undefined') {
+//         // Kod dla sessionStorage i localStorage
+//         // sessionStorage.setItem('name', 'Marysia'); // Usuwane po zamknięciu karty
+//         // localStorage.setItem('name', 'Ala'); // Nie usuwa się po zamknięciu strony
+//         // document.querySelector('#name').innerHTML = localStorage.getItem('name');
+//         // localStorage.removeItem('name');
+//         const formBgColor = document.forms[0];
+//         const body = document.querySelector('body');
+//         formBgColor.addEventListener('submit', (e) => {
+//             e.preventDefault();
+//             let color = formBgColor.querySelector('#bgColor').value;
+//             localStorage.setItem('bgColor', color);
+//             body.style.backgroundColor = color;
+//         });
+//         if (localStorage.getItem('bgColor') !== null) {
+//             body.style.backgroundColor = localStorage.getItem('bgColor');
+//         }
+//     }
+//     else {
+//         // Brak obsługi Web Storage API
+//     }
+// });
+window.addEventListener('DOMContentLoaded', () => {
+    if(typeof(Storage) !== 'undefined') {
+        // Kod dla sessionStorage i localStorage
+        // sessionStorage.setItem('name', 'Marysia'); // Usuwane po zamknięciu karty
+        // localStorage.setItem('name', 'Ala'); // Nie usuwa się po zamknięciu strony
+        // document.querySelector('#name').innerHTML = localStorage.getItem('name');
+        // localStorage.removeItem('name');`
+        const dropperdrag_img = document.dropper[0];
+        const body = document.querySelector('body');
+        dropperdrag_img.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let color = dropperdrag_img.querySelector('#drag_img').value;
+            localStorage.setItem('drag_img', color);
+            body.style.backgroundColor = color;
+        });
+        if (localStorage.getItem('drag_img') !== null) {
+            body.style.backgroundColor = localStorage.getItem('drag_img');
+        }
+    }
+    else {
+        // Brak obsługi Web Storage API
+    }
+});
