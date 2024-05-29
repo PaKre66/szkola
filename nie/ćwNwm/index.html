@@ -1,0 +1,54 @@
+<?php
+require_once('./database.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article>
+        <form action="upload_file.php" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="photo_file">Załaduj zdjęcie</label>
+                <input type="hidden" name="MAX_FILE_SIZE", value="50000000000000">
+                <input type="file" name="photo_file" id="photo_file">
+            </div>
+            <div>
+                <label for="photo_name">Nazwa pliku</label>
+                <input type="text" name="photo_name" id="photo_name">
+            </div>
+            <div>
+                <label for="photo_description">Opis zdjęcia</label>
+                <textarea name="photo_description" id="photo_description"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Wyślij">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </article>
+    <article class="gallery">
+<?php
+$query = 'SELECT * FROM `photos`';
+$stmt = $pdo->prepare($query);
+$stmt->execute();
+$stmt->setFetchMode(PDO::FETCH_ASSOC);
+foreach($stmt->fetchAll() as $k => $v) {
+?>
+        <section class="photo">
+            <img src="uploads/<?= $v['file_name'] ?>" alt="<?= $v['name'] ?>">
+            <footer>
+                <h4><?= $v['name'] ?></h4>
+                <p><?= $v['description'] ?></p>
+            </footer>
+        </section>
+<?php
+}
+?>
+    </article>
+</body>
+</html>

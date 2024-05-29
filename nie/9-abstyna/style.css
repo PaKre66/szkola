@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.lightbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.lightbox > div.modal {
+  background-color: rgb(150, 150, 150);
+  width: 50vw;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px red;
+}
+.lightbox > div.modal > header {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.lightbox > div.modal > footer {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.lightbox > div.modal > footer > input[type=button] {
+  padding: 5px;
+  display: block;
+  margin: auto;
+  width: 25%;
+}

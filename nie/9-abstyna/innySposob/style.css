@@ -1,0 +1,20 @@
+.modalButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.modalButton > #showModal {
+  display: block;
+  padding: 10px;
+  width: 25vw;
+}
+dialog {
+  border: 0;
+}
+dialog[open]::backdrop {
+  background-image: linear-gradient(to left, black , gray, black);
+  opacity: 0.7;
+  transition: all 3s ease-in-out;
+}
