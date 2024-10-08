@@ -1,0 +1,5 @@
+SELECT id_nazwa występowanie FROM ryby WHERE styl_zycia=1;
+
+SELECT ryby_id,	wymiar_ochrony FROM okres_ochrony WHERE wymiar_ochrony <30;
+
+SELECT 
