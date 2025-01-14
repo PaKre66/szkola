@@ -1,0 +1,38 @@
+html, body, header, section, article, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@keyframes key-1 {
+    from {
+      background-color: red;
+    }
+    to {
+      background-color: green;
+    }
+    }
+
+#transitions {
+  .trans-1 {
+      width: 200px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      background-color: black;
+      color: aliceblue;
+      transition: background-color 2s, color 2s;
+  }
+  .trans-1:hover {
+      background-color: #fff;
+  }
+}
+#keyframes {
+  .key-1 {
+      width: 200px;
+      height: 100px;
+      line-height: 100px;
+  }
+      background-color: red;
+      animation-name: key-1;
+}
