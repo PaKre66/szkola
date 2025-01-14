@@ -1,0 +1,3 @@
+kw1
+SELECT imie, pensja FROM pracownicy WHERE staz<5;
+kw2

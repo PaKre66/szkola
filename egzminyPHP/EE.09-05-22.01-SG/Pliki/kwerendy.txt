@@ -1,0 +1,8 @@
+kw1:
+SELECT haslo FROM uzytkownicy WHERE login='Justyna';
+kw2:
+SELECT COUNT(*) FROM dane;
+kw3:
+SELECT login, rok_urodz, przyjaciol, hobby, zdjecie FROM uzytkownicy, dane WHERE login='Justyna';
+kw4:
+ALTER TABLE dane ADD stanowisko varchar(30);

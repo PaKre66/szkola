@@ -1,0 +1,43 @@
+*{
+    font-style: garamond;
+}
+header{
+    background-color: rosybrown;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+form{
+    background-color: darksalmon;
+    text-align: center;
+    padding: 40px;
+}
+form>ol{
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(205, 92, 92);
+}
+main{
+    display: flex;
+}
+#left{
+    background-color: lightsalmon;
+    height: 300px;
+    width: 30%;
+}
+#right{
+    background-color: lightsalmon;
+    height: 300px;
+    width: 30%;
+}
+#middle{
+    background-color: lightsalmon;
+    height: 300px;
+    width: 40%;
+}
+footer{
+    background-color: rosybrown;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}

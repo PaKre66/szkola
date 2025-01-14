@@ -1,0 +1,27 @@
+html, body, header, footer, p, h1, h2, h3{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+header{
+    background-color: #3A7AD9;
+    text-align: center;
+    height: 50px;
+}
+main{
+    display: flex;
+}
+section{
+    background-color: #5D93E2;
+    height: 400px;
+    width: 30%;
+}
+aside{
+    background-color: #88B0EC;
+    height: 400px;
+    width: 70%;
+}
+footer{
+    background-color: #3A7AD9;
+    text-align: right;
+}

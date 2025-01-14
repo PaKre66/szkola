@@ -1,0 +1,71 @@
+*{
+    font-style: Georgia;
+    padding: 0;
+    margin: 0;
+}
+#up{
+    display: flex;
+}
+#upleft{
+   
+    background-color: rgb(197 ,85 , 160);
+    text-align: center;
+    width: 50%;
+    height: 180px;
+}
+#upright{
+    background-color: rgb(197 ,85 , 160);
+    text-align: center;
+    width: 50%;
+    height: 180px;
+}
+header,footer{
+    background-color: rgb(246 ,226 , 222);
+    text-align: center;
+    height: 100px;
+    padding: 10px;
+}
+main{
+    display: flex;
+    background-color: rgb(197,85 ,160 );
+    color: white;
+    height: 400px;
+}
+#left{
+    width: 50%; 
+}
+#right{
+    width: 50%;
+}
+#upright>a{
+    background-image: url(./cukierki1.png);
+    padding-right: 70px;
+    padding-bottom: 120px;
+    font-size: 150%;
+    text-decoration: none;
+}
+table{
+    border-style: solid;
+    border-width: 2px;
+    border-color: blue;
+    margin: 20px;
+    padding: 10px;
+}
+tr{
+    border-style: solid;
+    border-width: 2px;
+    border-color: blue;
+    margin: 20px;
+    padding: 10px;
+}
+td{
+    border-style: solid;
+    border-width: 2px;
+    border-color: blue;
+    margin: 20px;
+    padding: 10px;
+}
+h2{
+    letter-spacing: 10px;
+    font-size: 200%
+}

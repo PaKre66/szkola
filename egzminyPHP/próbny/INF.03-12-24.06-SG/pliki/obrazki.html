@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="./styl.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <main>
+        <section id="blok1">
+            <img src="./pszczola.jpg" alt="pszczoła na fioletowym kwiatku">
+            <form action="#" method="#">
+               
+                   <p> <input type="radio" name="blur" id="blur" value="Blur">blur</p>
+                    <p><input type="radio" name="sepia" id="sepia" value="Sepia">sepia</p>
+                    <p><input type="radio" name="negatyw" id="negatyw" value="Negatyw">negatyw</p>
+                
+            </form>
+            <input type="submit" value="Zastosuj" id="submit">
+        </section>
+        <section id="blok2">
+            <p><img src="./pomarancza.jpg" alt="drzewo pomarańczy"></p>
+            <input type="button" value="Kolorowy" id="kolorowy">
+            <input type="button" value="Czarno-bialy" id="czarno-bialy">
+        </section>
+        <section id="blok3">
+            <p><img src="./owoce.jpg" alt="kosz pełen owoców"></p>
+            <input type="range" name="suw1" id="suw1" min="0" max="100" value="100">
+            <input type="submit" value="Zastosuj" id="submit">
+        </section>
+        <section id="blok4">
+            <p><img src="./zolw.jpg" alt="Żółw w wodzie"></p>
+            <input type="range" name="suw2" id="suw2" min="0" max="250">
+            <input type="submit" value="Zastosuj" id="submit">
+        </section>
+    </main>
+    <footer>
+        <p><a href="http://www.css.com/">Zobacz inne efekty obrazu</a></p>
+        <p>prace wykonał:ja</p>
+    </footer>
+</body>
+</html>
